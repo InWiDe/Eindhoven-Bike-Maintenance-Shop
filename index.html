@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/spreadsheet.css">
+    <title>Hello, world!</title>
+    <script type="text/javascript"
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOgI1yuT_ZazJVD7rBR2NLSp3Xocye1p8"></script>
+
+    <script type="text/javascript">
+        // When the window has finished loading create our google map below
+        google.maps.event.addDomListener(window, 'load', init);
+
+        function init() {
+            // Basic options for a simple Google Map
+            // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+            var mapOptions = {
+                // How zoomed in you want the map to start at (always required)
+                zoom: 13,
+
+                // The latitude and longitude to center the map (always required)
+                center: new google.maps.LatLng(51.442327, 5.4827513), // New York
+
+                // How you would like to style the map.
+                // This is where you would paste any style found on Snazzy Maps.
+                styles: [{
+                    "featureType": "all",
+                    "elementType": "geometry.fill",
+                    "stylers": [{"weight": "2.00"}]
+                }, {
+                    "featureType": "all",
+                    "elementType": "geometry.stroke",
+                    "stylers": [{"color": "#9c9c9c"}]
+                }, {
+                    "featureType": "all",
+                    "elementType": "labels.text",
+                    "stylers": [{"visibility": "on"}]
+                }, {
+                    "featureType": "landscape",
+                    "elementType": "all",
+                    "stylers": [{"color": "#f2f2f2"}]
+                }, {
+                    "featureType": "landscape",
+                    "elementType": "geometry.fill",
+                    "stylers": [{"color": "#ffffff"}]
+                }, {
+                    "featureType": "landscape.man_made",
+                    "elementType": "geometry.fill",
+                    "stylers": [{"color": "#ffffff"}]
+                }, {
+                    "featureType": "poi",
+                    "elementType": "all",
+                    "stylers": [{"visibility": "off"}]
+                }, {
+                    "featureType": "road",
+                    "elementType": "all",
+                    "stylers": [{"saturation": -100}, {"lightness": 45}]
+                }, {
+                    "featureType": "road",
+                    "elementType": "geometry.fill",
+                    "stylers": [{"color": "#eeeeee"}]
+                }, {
+                    "featureType": "road",
+                    "elementType": "labels.text.fill",
+                    "stylers": [{"color": "#7b7b7b"}]
+                }, {
+                    "featureType": "road",
+                    "elementType": "labels.text.stroke",
+                    "stylers": [{"color": "#ffffff"}]
+                }, {
+                    "featureType": "road.highway",
+                    "elementType": "all",
+                    "stylers": [{"visibility": "simplified"}]
+                }, {
+                    "featureType": "road.arterial",
+                    "elementType": "labels.icon",
+                    "stylers": [{"visibility": "off"}]
+                }, {
+                    "featureType": "transit",
+                    "elementType": "all",
+                    "stylers": [{"visibility": "off"}]
+                }, {
+                    "featureType": "water",
+                    "elementType": "all",
+                    "stylers": [{"color": "#46bcec"}, {"visibility": "on"}]
+                }, {
+                    "featureType": "water",
+                    "elementType": "geometry.fill",
+                    "stylers": [{"color": "#c8d7d4"}]
+                }, {
+                    "featureType": "water",
+                    "elementType": "labels.text.fill",
+                    "stylers": [{"color": "#070707"}]
+                }, {"featureType": "water", "elementType": "labels.text.stroke", "stylers": [{"color": "#ffffff"}]}]
+            };
+
+            // Get the HTML DOM element that will contain your map
+            // We are using a div with id="map" seen below in the <body>
+            var mapElement = document.getElementById('map');
+
+            // Create the Google Map using our element and options defined above
+            var map = new google.maps.Map(mapElement, mapOptions);
+
+            // Let's also add a marker while we're at it
+            var marker = new google.maps.Marker({
+                position: new google.maps.LatLng(40.6700, -73.9400),
+                map: map,
+                title: 'Snazzy!'
+            });
+        }
+    </script>
+</head>
+<body>
+
+
+<div class="bg overlay">
+
+
+    <nav class="navbar navbar-light bg-faded fixed-top navbar-default navbar-fixed-top">
+        <a class="navbar-brand justify-content-start text-white lead" href="#">
+            <img src="/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+            <b>E</b>indhoven <b>B</b>ike <b>M</b>aintenance
+        </a>
+        <div class="navbar justify-content-end">
+            <a class="nav-item nav-link text-white lead " href="SignIn.html">LOG IN</a>
+            <a class="nav-item nav-link text-white lead " href="#">ABOUT</a>
+            <a class="nav-item nav-link text-white lead" href="#">SERVICES</a>
+            <a class="nav-item nav-link text-white lead" href="#">CONTACT</a>
+            <a class="nav-item nav-link text-white lead" href="#">CALL US</a>
+        </div>
+
+    </nav>
+
+    <div style="background: transparent" id="homepage" class="jumbotron jumbotron-fluid text-white">
+        <div class="container text-center">
+            <h1 class="display-4 ">This is our site</h1>
+            <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention
+                to
+                featured content or information.</p>
+            <hr class="my-4">
+            <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+            <p class="lead">
+                <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+            </p>
+        </div>
+
+    </div>
+</div>
+
+<div style="height: 100px"></div>
+
+<div class="container">
+    <div style="background: transparent" class="jumbotron jumbotron-fluid ">
+        <div class="container text-center">
+            <h1 class="display-4">How does it work ?</h1>
+            <p class="lead">You will be <b>amazed</b> how simple it is!</p>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm text-center">
+                <h1 CLASS="display-4">STEP 1</h1>
+                <div style="height: 50px"></div>
+                <i class="fas fa-mobile fa-5x"></i>
+                <div style="height: 20px"></div>
+                <p>You simply register and choose one of our plans that satisfies your needs</p>
+
+            </div>
+            <div class="col-sm text-center">
+                <h1 class="display-4">STEP 2</h1>
+                <div style="height: 50px"></div>
+                <i class="fas fa-truck fa-5x"></i>
+                <div style="height: 20px"></div>
+                <p>We came to pick up the bike</p>
+            </div>
+            <div class="col-sm text-center">
+                <h1 class="display-4">STEP 3</h1>
+                <div style="height: 50px"></div>
+                <i style="font-size: 5em" class="fas fa-envelope fa-5x"></i>
+                <div style="height: 20px"></div>
+                <p>We will send you a message with maintenance status and when we will return it back to you</p>
+            </div>
+            <div class="col-sm text-center">
+                <h1 class="display-4">STEP 4</h1>
+                <div style="height: 50px"></div>
+                <i style="font-size: 5em" class="fas fa-bicycle fa-5x"></i>
+                <div style="height: 20px"></div>
+                <p>You will get your bike ready in front of your door in 2-3 working days</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div style="height: 150px;background-color: darkslateblue"></div>
+
+<div style="height: auto" class="container">
+    <h1 class="display-4 text-center">Area</h1>
+    <p class="lead text-center">Quickly build an effective pricing table for your potential customers with this
+        Bootstrap example. It's built with default Bootstrap components and utilities with little customization.</p>
+    <div class="row">
+        <div class="col-sm text-center ">
+            <div id="map"></div>
+        </div>
+        <div class="col-sm text-center ">
+            <p>Lorem Ipsum is slechts een proeftekst uit het drukkerij- en zetterijwezen. Lorem Ipsum is de standaard
+                proeftekst in deze bedrijfstak sinds de 16e eeuw, toen een onbekende drukker een zethaak met letters nam
+                en ze door elkaar husselde om een font-catalogus te maken. Het heeft niet alleen vijf eeuwen overleefd
+                maar is ook, vrijwel onveranderd, overgenomen in elektronische letterzetting. Het is in de jaren '60
+                populair geworden met de introductie van Letraset vellen met Lorem Ipsum passages en meer recentelijk
+                door desktop publishing software zoals Aldus PageMaker die versies van Lorem Ipsum bevatten.
+                Waarom gebruiken we het?
+
+                Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de layout van een
+                pagina, afgeleid wordt door de tekstuele inhoud. Het belangrijke punt van het gebruik van Lorem Ipsum is
+                dat het uit een min of meer normale verdeling van letters bestaat, in tegenstelling tot "Hier uw tekst,
+                hier uw tekst" wat het tot min of meer leesbaar nederlands maakt. Veel desktop publishing pakketten en
+                web pagina editors gebruiken tegenwoordig Lorem Ipsum als hun standaard model tekst, en een zoekopdracht
+                naar "lorem ipsum" ontsluit veel websites die nog in aanbouw zijn. Verscheidene versies hebben zich
+                ontwikkeld in de loop van de jaren, soms per ongeluk soms expres (ingevoegde humor en dergelijke).
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="container" style="background-color: darkslateblue">
+    <div class="text-white">
+        <h1 class="display-4 text-center ">PRICING</h1>
+        <p class="lead text-center">Quickly build an effective pricing table for your potential customers with this
+            Bootstrap example. It's built with default Bootstrap components and utilities with little customization.</p>
+    </div>
+
+    <div class="card-deck mb-3 center text">
+        <div class="card" style="width: 20rem;">
+            <!--<img class="card-img-top" src="..." alt="Card image cap">-->
+            <div class="card-block text-center">
+                <h1 class="card-title">BASIC</h1>
+                <p class="card-text">Lorem Ipsum is slechts een proeftekst uit het drukkerij- en zetterijwezen. Lorem
+                    Ipsum is de standaard proeftekst in deze bedrijfstak sinds de 16e eeuw, toen een onbekende drukker
+                    een zethaak met letters nam en ze door elkaar husselde om een font-catalogus te maken. Het heeft
+                    niet alleen vijf eeuwen overleefd maar is ook, vrijwel onveranderd, overgenomen in elektronische
+                    letterzetting</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+
+        <div class="card" style="width: 20rem;">
+            <!--<img class="card-img-top" src="..." alt="Card image cap">-->
+            <div class="card-block text-center">
+                <h1 class="card-title ">PLUS</h1>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+
+        <div class="card" style="width: 20rem;">
+            <!--<img class="card-img-top" src="" alt="Card image cap">-->
+            <div class="card-block text-center ">
+                <h1 class="card-title ">PREMIUM</h1>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+        <div style="padding-top: 50px; height: 20px;" class="container"></div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="text-center">
+        <h1 class="display-4">Have any question ?</h1>
+        <p>Contact us via</p>
+    </div>
+
+    <div class="row justify-content-md-center">
+        <div class="col-3 text-center ">
+            <i class="far fa-envelope fa-5x"></i>
+
+
+        </div>
+        <div class="col-3 text-center display-4 ">OR</div>
+        <div class="col-3 text-center ">
+            <i class="fas fa-phone fa-5x"></i>
+
+        </div>
+    </div>
+    <div class="row justify-content-center" style="padding-top: 20px">
+        <div class="col-3 text-center">
+
+            <button class="btn btn-primary">EBM@gmail.com</button>
+
+        </div>
+        <div class="col-3 text-center "></div>
+        <div class="col-3 text-center ">
+            <button class="btn btn-primary">0490 54 84 49</button>
+        </div>
+
+    </div>
+
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container text-center">
+            <h1 class="display-3">Stay updated!</h1>
+            <p class="lead">Sign up to receive news, tips, and more. </p>
+            <p class="lead">We promise to only send 1-2 emails per month :) </p>
+            <form action="">
+                <div class="form-group">
+                    <!--<label for="exampleInputEmail1">Email address</label> -->
+                    <input style=" margin: 0 auto;width: 400px;" type="email"
+                           class="form-control justify-content-center"
+                           id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.
+                    </small>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+</div>
+
+<div style="height: 400px; background-color: darkslateblue" class="jumbotron-fluid">
+    <div class="container text-center text-white" >
+        <div class="row text-white" style="padding-top: 10px;">
+            <div class="col">
+                <h4>History of the company</h4>
+            </div>
+            <div class="col">
+                <h4>Our work</h4>
+            </div>
+            <div class="col">
+                <h4>Company</h4>
+            </div>
+            <div class="col">
+                <h4>Contact</h4>
+            </div>
+        </div>
+        <div class="container" style="padding-top: 10px;">
+            <p class="lead">Stay connected with us via</p>
+        </div>
+        <div class="row text-white">
+
+            <div class="col">
+                <i class="fab fa-facebook fa-5x"></i>
+            </div>
+
+            <div class="col">
+                <i class="fab fa-twitter-square fa-5x"></i>
+            </div>
+
+            <div class="col">
+                <i class="fab fa-pinterest-square fa-5x"></i>
+            </div>
+        </div>
+
+        <div class="lead">Here is the adress</div>
+        <hr class="my-4">
+        <p class="">Copyright © 2018 Design by Nikita & Catalin</p>
+    </div>
+</div>
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+<script>
+    $(window).scroll(function(){
+    $('nav').toggleClass('scrolled', $(this).scrollTop() > 50);
+    });
+</script>
+</body>
+</html>

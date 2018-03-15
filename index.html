@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/spreadsheet.css">
-    <title>Hello, world!</title>
+    <title>Welcome to EBM</title>
     <script type="text/javascript"
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOgI1yuT_ZazJVD7rBR2NLSp3Xocye1p8"></script>
 
@@ -115,6 +115,7 @@
             });
         }
     </script>
+
 </head>
 <body>
 
@@ -137,7 +138,7 @@
 
     </nav>
 
-    <div style="background: transparent" id="homepage" class="jumbotron jumbotron-fluid text-white">
+    <div id="homepage" class="jumbotron jumbotron-fluid text-white">
         <div class="container text-center">
             <h1 class="display-4">Life is a beautifull ride </h1>
             <p class="lead">Your part is to ride the bike, ours is to keep it well maintained and clean</p>
@@ -151,10 +152,10 @@
     </div>
 </div>
 
-<div style="height: 100px"></div>
+<div id="emptyBox"></div>
 
 <div class="container">
-    <div style="background: transparent" class="jumbotron jumbotron-fluid ">
+    <div class="jumbotron jumbotron-fluid" id="transparent">
         <div class="container text-center">
             <h1 class="display-4">How does it work ?</h1>
             <p class="lead">You will be <b>amazed</b> how simple it is!</p>
@@ -166,31 +167,31 @@
         <div class="row">
             <div class="col-sm text-center">
                 <h1 CLASS="display-4">STEP 1</h1>
-                <div style="height: 50px"></div>
+                <div class="headerStepTop"></div>
                 <i class="fas fa-mobile fa-5x"></i>
-                <div style="height: 20px"></div>
+                <div class="headerStepBottom"></div>
                 <p>You simply register and choose one of our plans that satisfies your needs</p>
 
             </div>
             <div class="col-sm text-center">
                 <h1 class="display-4">STEP 2</h1>
-                <div style="height: 50px"></div>
+                <div class="headerStepTop"></div>
                 <i class="fas fa-truck fa-5x"></i>
-                <div style="height: 20px"></div>
+                <div class="headerStepBottom"></div>
                 <p>We came to pick up the bike</p>
             </div>
             <div class="col-sm text-center">
                 <h1 class="display-4">STEP 3</h1>
-                <div style="height: 50px"></div>
-                <i style="font-size: 5em" class="fas fa-envelope fa-5x"></i>
-                <div style="height: 20px"></div>
+                <div class="headerStepTop"></div>
+                <i class="fas fa-envelope fa-5x"></i>
+                <div class="headerStepBottom"></div>
                 <p>We will send you a message with maintenance status and when we will return it back to you</p>
             </div>
             <div class="col-sm text-center">
                 <h1 class="display-4">STEP 4</h1>
-                <div style="height: 50px"></div>
-                <i style="font-size: 5em" class="fas fa-bicycle fa-5x"></i>
-                <div style="height: 20px"></div>
+                <div class="headerStepTop"></div>
+                <i class="fas fa-bicycle fa-5x"></i>
+                <div class="headerStepBottom"></div>
                 <p>You will get your bike ready in front of your door in 2-3 working days</p>
             </div>
         </div>
@@ -198,9 +199,9 @@
 
 </div>
 
-<div style="height: 150px;background-color: darkslateblue"></div>
+<div id="emptyBox2"></div>
 
-<div style="height: auto" class="container">
+<div class="container">
     <h1 class="display-4 text-center">Area</h1>
     <p class="lead text-center">
         Our area of work is in Eindhoven. Are you living not in Eindhoven but near? Contact us to for more information via phone or email.
@@ -230,7 +231,7 @@
     </div>
 </div>
 
-<div class="container" style="background-color: darkslateblue">
+<div class="container darkslateblueBackground">
     <div class="text-white">
         <h1 class="display-4 text-center ">PRICING</h1>
         <p class="lead text-center">Quickly build an effective pricing table for your potential customers with this
@@ -294,9 +295,9 @@
     </div>
     <div class="row justify-content-center" style="padding-top: 20px">
         <div class="col-3 text-center">
-
-            <button class="btn btn-primary">EBM@gmail.com</button>
-
+            <button class="btn btn-primary" type="submit">
+              EBM@gmail.com
+            </button>
         </div>
         <div class="col-3 text-center "></div>
         <div class="col-3 text-center ">
@@ -305,7 +306,7 @@
 
     </div>
 
-    <div class="jumbotron jumbotron-fluid" style="margin-top:50px">
+    <div class="jumbotron jumbotron-fluid" id="stayUpdated">
         <div class="container text-center">
             <h1 class="display-3">Stay updated!</h1>
             <p class="lead">Sign up to receive news, tips, and more. </p>
@@ -313,7 +314,7 @@
             <form action="">
                 <div class="form-group">
                     <!--<label for="exampleInputEmail1">Email address</label> -->
-                    <input style=" margin: 0 auto;width: 400px;" type="email"
+                    <input type="email"
                            class="form-control justify-content-center"
                            id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
                     <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.
@@ -326,12 +327,12 @@
 
 </div>
 
-<div style="height: 310px; background-color: darkslateblue;" class="jumbotron-fluid">
+<div  id="stayConnected" class="jumbotron-fluid">
     <div class="container text-center text-white" >
-        <div class="row text-white" style="padding-top: 10px;">
+        <div class="row text-white" >
 
         </div>
-        <div class="container" style="padding-top: 10px;margin-bottom: 40px;">
+        <div class="container">
             <p class="lead">Stay connected with us via</p>
         </div>
         <div class="row text-white">
@@ -359,13 +360,13 @@
 
 
 
-        <div style="padding-top: 40px">
-            <hr class="my-4" style="border-color: grey ">
+        <div id="footerStyle">
+            <hr class="my-4">
             <div class="row muted-text">
-                <div class="col"><a  style="color:white; text-decoration:none" href="">Blog</a></div>
-                <div class="col"><a style="color:white; text-decoration:none" href="" >About</a></div>
-                <div class="col"><a style="color:white; text-decoration:none" href="" >Support</a></div>
-                <div class="col"><a style="color:white; text-decoration:none" href="" >Jobs</a></div>
+                <div class="col"><a href="">Blog</a></div>
+                <div class="col"><a href="" >About</a></div>
+                <div class="col"><a href="" >Support</a></div>
+                <div class="col"><a href="" >Jobs</a></div>
             </div>
         </div>
 

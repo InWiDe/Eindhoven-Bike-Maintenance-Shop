@@ -10,8 +10,9 @@ CONTENTS OF THIS FILE
  * Project Status based on feedback:
     * ~~Create Readme.MD~~
     * ~~Move CSS code from inline style to external style sheet.~~
-    * ~~Add more javascript~~
-    * Add PHP code
+    * ~~Add more JS scrips~~
+    * Add PHP login authentication and registration 
+    * Add more database tables based on account page
     
  
  * Requirements

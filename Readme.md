@@ -3,14 +3,21 @@ CONTENTS OF THIS FILE
    
  * Introduction 
  
- 
+
     This is a (work in progress) project for WEB class.
     The tehnologies used are HTML, CSS, JS, PHP & MySQL
+    
+ * Project Status based on feedback:
+    * ~~Create Readme.MD~~
+    * ~~Move CSS code from inline style to external style sheet.~~
+    * ~~Add more javascript~~
+    * Add PHP code
+    
  
  * Requirements
     
-    Web tehnologies knowledge
- 
+    Web tehnologies knowledge from WEB 1 Course
+
  * Recommended modules
  
     None
@@ -31,7 +38,7 @@ CONTENTS OF THIS FILE
  
     1. 
     Does this use the latest framework of Bootstrap ?
-    Yes, version 4.0
+    Yes, version 4.0!
     
     2. 
     Can I use this project for myself?

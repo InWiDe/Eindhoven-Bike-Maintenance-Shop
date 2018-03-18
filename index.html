@@ -130,22 +130,25 @@
         </a>
         <div class="navbar justify-content-end">
             <a class="nav-item nav-link text-white lead " href="SignIn.html">LOG IN</a>
-            <a class="nav-item nav-link text-white lead " href="#">ABOUT</a>
-            <a class="nav-item nav-link text-white lead" href="#">SERVICES</a>
-            <a class="nav-item nav-link text-white lead" href="#">CONTACT</a>
-            <a class="nav-item nav-link text-white lead" href="#">CALL US</a>
+            <a class="nav-item nav-link text-white lead " href="#about">ABOUT</a>
+            <a class="nav-item nav-link text-white lead" href="#purchase">PLANS</a>
+            <a class="nav-item nav-link text-white lead" href="#contact">CONTACT</a>
+            <a class="nav-item nav-link text-white lead" href="skype:echo123?call">CALL US</a>
         </div>
 
     </nav>
 
     <div id="homepage" class="jumbotron jumbotron-fluid text-white">
         <div class="container text-center">
-            <h1 class="display-4">Life is a beautifull ride </h1>
-            <p class="lead">Your part is to ride the bike, ours is to keep it well maintained and clean</p>
+            <q class="display-4" id="quoteText"></q>
+            <em>by <span id="quoteAuthor"></span></em>
+            <div id="emptyBox3"></div>
+
             <hr class="my-4">
-            <p>We've created a maintenance plan for everyone.</p>
+            <p class="lead">Your part is to ride the bike, ours is to keep it well maintained and clean</p>
+            <p class="lead">That's why we've created a maintenance plan for <strong>EVERYONE</strong>.</p>
             <p class="lead">
-                <a class="btn btn-primary btn-lg" href="#" role="button">Check our services!</a>
+                <a class="btn btn-primary btn-lg" href="#purchase" role="button">Check our services!</a>
             </p>
         </div>
 
@@ -154,7 +157,14 @@
 
 <div id="emptyBox"></div>
 
-<div class="container">
+<div class="container text-center">
+    <h1 class="display-4">Let's start from the problem</h1>
+    <h1 class="lead">Maintaining a bike is not a easy job for everyone</h1>
+    <h1 class="lead">If you don't believe us, please click the picture below</h1>
+    <img id="bikePhoto" src="img/bikeParts.jpg" alt="Parts of the bike">
+</div>
+
+<div class="container" id="about">
     <div class="jumbotron jumbotron-fluid" id="transparent">
         <div class="container text-center">
             <h1 class="display-4">How does it work ?</h1>
@@ -199,9 +209,11 @@
 
 </div>
 
-<div id="emptyBox2"></div>
+<div class="container" id="emptyBox2">
 
-<div class="container">
+</div>
+
+<div class="container fadeThis">
     <h1 class="display-4 text-center">Area</h1>
     <p class="lead text-center">
         Our area of work is in Eindhoven. Are you living not in Eindhoven but near? Contact us to for more information via phone or email.
@@ -211,31 +223,24 @@
             <div id="map"></div>
         </div>
         <div class="col-sm text-center ">
-            <p>Lorem Ipsum is slechts een proeftekst uit het drukkerij- en zetterijwezen. Lorem Ipsum is de standaard
-                proeftekst in deze bedrijfstak sinds de 16e eeuw, toen een onbekende drukker een zethaak met letters nam
-                en ze door elkaar husselde om een font-catalogus te maken. Het heeft niet alleen vijf eeuwen overleefd
-                maar is ook, vrijwel onveranderd, overgenomen in elektronische letterzetting. Het is in de jaren '60
-                populair geworden met de introductie van Letraset vellen met Lorem Ipsum passages en meer recentelijk
-                door desktop publishing software zoals Aldus PageMaker die versies van Lorem Ipsum bevatten.
-                Waarom gebruiken we het?
-
-                Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de layout van een
-                pagina, afgeleid wordt door de tekstuele inhoud. Het belangrijke punt van het gebruik van Lorem Ipsum is
-                dat het uit een min of meer normale verdeling van letters bestaat, in tegenstelling tot "Hier uw tekst,
-                hier uw tekst" wat het tot min of meer leesbaar nederlands maakt. Veel desktop publishing pakketten en
-                web pagina editors gebruiken tegenwoordig Lorem Ipsum als hun standaard model tekst, en een zoekopdracht
-                naar "lorem ipsum" ontsluit veel websites die nog in aanbouw zijn. Verscheidene versies hebben zich
-                ontwikkeld in de loop van de jaren, soms per ongeluk soms expres (ingevoegde humor en dergelijke).
-            </p>
+            <ul class="list-group list-group-flush" style="list-style: none;">
+                <h1 class="lead">We are delivering the fastest maintenance services by:</h1>
+               <li>Picking up the bike</li>
+                <li>Delivering back the bike</li>
+                <li>We can deliver certain parts to the client if needed</li>
+                <li>We can also do some certain services requested by the client at his house</li>
+                <li>And much more!</li>
+            </ul>
         </div>
     </div>
 </div>
 
-<div class="container darkslateblueBackground">
+<div class="container darkslateblueBackground" id="purchase">
     <div class="text-white">
-        <h1 class="display-4 text-center ">PRICING</h1>
-        <p class="lead text-center">Quickly build an effective pricing table for your potential customers with this
-            Bootstrap example. It's built with default Bootstrap components and utilities with little customization.</p>
+        <h1 class="display-4 text-center ">PLANS</h1>
+        <p class="lead text-center">Our price range is for everyone!</p>
+        <hr>
+        <p class="lead text-center">We will <strong>check, adjust or repair</strong> based on the plans below: </p>
     </div>
 
     <div class="card-deck mb-3 center text">
@@ -243,12 +248,16 @@
             <!--<img class="card-img-top" src="..." alt="Card image cap">-->
             <div class="card-block text-center">
                 <h1 class="card-title">BASIC</h1>
-                <p class="card-text">Lorem Ipsum is slechts een proeftekst uit het drukkerij- en zetterijwezen. Lorem
-                    Ipsum is de standaard proeftekst in deze bedrijfstak sinds de 16e eeuw, toen een onbekende drukker
-                    een zethaak met letters nam en ze door elkaar husselde om een font-catalogus te maken. Het heeft
-                    niet alleen vijf eeuwen overleefd maar is ook, vrijwel onveranderd, overgenomen in elektronische
-                    letterzetting</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <div class="card-text">
+                    <ul class="list-group list-group-flush" style="list-style-type:none;">
+                        <li>Tire pressure</li>
+                        <li>Chain lubrication, </li>
+                        <li>Quick brake and gears check-up </li>
+                        <li>Main nuts/bolts check-up</li>
+                    </ul>
+
+                </div>
+
             </div>
         </div>
 
@@ -256,9 +265,14 @@
             <!--<img class="card-img-top" src="..." alt="Card image cap">-->
             <div class="card-block text-center">
                 <h1 class="card-title ">PLUS</h1>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <ul class="list-group list-group-flush" style="list-style-type:none;">
+                    <li>Tire pressure</li>
+                    <li>Chain tension and lubrication</li>
+                    <li>Brakes (adjustment and lubrication) </li>
+                    <li>Gears (quick adjustment and lubrication)</li>
+                    <li>Lubrication of nuts and bolts (all)</li>
+                </ul>
+
             </div>
         </div>
 
@@ -266,16 +280,23 @@
             <!--<img class="card-img-top" src="" alt="Card image cap">-->
             <div class="card-block text-center ">
                 <h1 class="card-title ">PREMIUM</h1>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <ul class="list-group list-group-flush" style="list-style-type:none;">
+                    <li>Tire pressure</li>
+                    <li>Chain tension and lubrication</li>
+                    <li>Brakes (complete adjustment and lubrication) </li>
+                    <li>Gears (complete adjustment and lubrication)</li>
+                    <li>Lubrication of nuts and bolts (all)</li>
+                    <li>Cables replacement and housing</li>
+                    <li>Complete truing of the wheels</li>
+                </ul>
+
             </div>
         </div>
         <div style="padding-top: 50px; height: 20px;" class="container"></div>
     </div>
 </div>
 
-<div class="container">
+<div class="container" id="contact">
     <div class="text-center">
         <h1 class="display-4">Have any question ?</h1>
         <p>Contact us via</p>
@@ -306,8 +327,10 @@
 
     </div>
 
+
+
     <div class="jumbotron jumbotron-fluid" id="stayUpdated">
-        <div class="container text-center">
+        <div class=" text-center">
             <h1 class="display-3">Stay updated!</h1>
             <p class="lead">Sign up to receive news, tips, and more. </p>
             <p class="lead">We promise to only send 1-2 emails per month :) </p>
@@ -363,16 +386,23 @@
         <div id="footerStyle">
             <hr class="my-4">
             <div class="row muted-text">
-                <div class="col"><a href="">Blog</a></div>
+                <div class="col"><a href="" >Blog</a></div>
                 <div class="col"><a href="" >About</a></div>
                 <div class="col"><a href="" >Support</a></div>
                 <div class="col"><a href="" >Jobs</a></div>
+                <div class="col"><a href="" onclick="window.print();">Print this page</a></div>
             </div>
         </div>
 
     </div>
 </div>
 
+<!-- The Modal -->
+<div id="myModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="img01">
+    <div id="caption"></div>
+</div>
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -386,10 +416,91 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
+
+<!-- Script 1. Navigation bar purple color to transparent-->
 <script>
     $(window).scroll(function(){
     $('nav').toggleClass('scrolled', $(this).scrollTop() > 50);
     });
 </script>
+<!-- Script 2. Printing the page script -->
+
+<!-- Printing option at the bottom of the page -->
+
+<!-- Script 3 It will change background from day to night mode depending on the time of the day-->
+
+<script type="text/javascript">
+    var now = new Date();
+    var hours = now.getHours();
+    //Place this script in your HTML heading section
+
+    document.bgColor="white";
+
+    //19-07 night
+    if (hours > 19 ||  hours < 7){
+        document.write ('<body style="background-color: white">');
+    }
+    //08-18 day
+    else {
+        document.write ('<body style="background-color: white">');
+    }
+
+</script>
+<!-- Script 4 Scrolling effect on the title tab text -->
+
+<script>
+    (function titleNameScroll(text) {
+    document.title = text;
+    setTimeout(function () {
+        titleNameScroll(text.substr(1) + text.substr(0, 1));
+    }, 500);
+    }(" Welcome to EBM "));
+</script>
+
+<!-- Script 5 Random quote -->
+
+<script>
+    var quotes = ['Life is a beautifull ride',
+        'Life is like riding a bicycle. In order to keep your balance, you must keep moving.',
+        'Nothing compares to the simple pleasure of riding a bike.',
+        'Whoever invented the bicycle deserves the thanks of humanity',
+        'Ride as much or as little, as long or as short as you feel. But ride'
+    ];
+    var author = [
+        'EBM Team',
+        'Albert Einstein',
+        'John F. Kennedy',
+        'Lord Charles Beresford',
+        'Eddy Merckx'];
+
+    var randomNumber = Math.floor((Math.random() * 4) + 1);
+    document.getElementById('quoteText').innerHTML = quotes[randomNumber];
+    document.getElementById('quoteAuthor').innerHTML = author[randomNumber];
+</script>
+<!-- Script 6 Modal picture of bike parts-->
+
+<script>
+    // Get the modal
+    var modal = document.getElementById('myModal');
+
+    // Get the image and insert it inside the modal - use its "alt" text as a caption
+    var img = document.getElementById('bikePhoto');
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+    img.onclick = function(){
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+    };
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";}
+</script>
+
+
 </body>
 </html>

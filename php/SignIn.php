@@ -1,7 +1,6 @@
 <?php
 session_start();
 
-
 $host = "studmysql01.fhict.local";
 $user = "dbi388250";
 $db = "dbi388250";
@@ -10,7 +9,7 @@ try {
     $connect = new PDO("mysql:host=" . $host . ";dbname=" . $db, $user, $pass);
     $connect->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
-    if(isset($_POST["btn"]))
+    if(isset($_POST["clicked"]))
     {
         if(empty($_POST["inputEmail"])|| empty($_POST["inputPassword"]))
         {
@@ -18,7 +17,7 @@ try {
         }
         else 
         {
-            $query = "SELECT * FROM accounts WHERE Email = :inputEmail and Password = :inputPassword";
+            $query = "SELECT * FROM accounts WHERE  inputEmail = :inputEmail and inputPassword = :inputPassword";
             $statement = $connect->prepare($query);
             $statement->execute(array(
                     'inputEmail' => $_POST["inputEmail"],
@@ -30,7 +29,7 @@ try {
                 $_SESSION["inputEmail"]=$_POST["inputEmail"];
             }
             else {
-                $message = '<label>Wrong Data </label>';
+                header('Location:SignIn.php');
             }
         }
     }
@@ -168,7 +167,7 @@ try {
 
 <div class="bg overlay">
     <nav class="navbar navbar-light bg-faded fixed-top navbar-default navbar-fixed-top">
-        <a class="navbar-brand justify-content-start text-white lead" href="index.html">
+        <a class="navbar-brand justify-content-start text-white lead" href="index.php">
             <img src="/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
             <b>E</b>indhoven <b>B</b>ike <b>M</b>aintenance
         </a>
@@ -186,7 +185,7 @@ try {
         <div class="col">
             <div class="container" >
                 <div class="signInForm">
-                    <form action="account.html" class="container">
+                    <form action="account.php" class="container">
                         <div>
                             <h1 class="h3 mb-3 font-weight-normal text-white">Please log in</h1>
                             <label for="inputEmail" class="sr-only">Email address</label>
@@ -199,7 +198,7 @@ try {
                                     <input type="checkbox" value="remember-me"> Remember me
                                 </label>
                             </div>
-                            <button class="btn btn-lg btn-primary btn-block text-white marginBot" type="submit">
+                            <button onclick="location.href= 'account.php'" class="btn btn-lg btn-primary btn-block text-white marginBot"  type="submit" name = "clicked">
                                 Log in
                             </button>
                             <p class="p text-white text-center">OR</p>

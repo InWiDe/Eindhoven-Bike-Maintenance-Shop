@@ -1,32 +1,34 @@
 <?php
-try {
-    $host = "studmysql01.fhict.local";
-    $user = "dbi388250";
-    $db = "dbi388250";
-    $pass = "kiashi100";
 
-    $odb = new PDO("mysql:host=" . $host . ";dbname=" . $db, $user, $pass);
-    $odb ->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    echo "Connected successfully";
+$host = "studmysql01.fhict.local";
+$user = "dbi388250";
+$db = "dbi388250";
+$pass = "kiashi100";
 
-    if (isset($_POST["btn"])) {
-        $email = $_POST["inputEmail"];
-        $password1 = $_POST["inputPassword"];
-        $password2 = $_POST["inputPassword2"];
+if(isset($_POST['submit'])) {
+    try {
+        $odb = new PDO("mysql:host=".$host.";dbname=".$db,$user,$pass);
+    }catch(PDOException $exc)
+    {
+        echo $exc->getMessage();
+        exit();
+    }
+    $inputEmail = $_POST['inputEmail'];
+    $inputPassword = $_POST['inputPassword'];
+    $inputPassword2 = $_POST['inputPassword2'];
+    if($inputPassword ==$inputPassword2)
+    {
+        $q = "INSERT INTO accounts(inputEmail, inputPassword) VALUES (:inputEmail,:inputPassword)";
+        $query = $odb->prepare($q);
+        $results = $query -> execute(array(":inputEmail" => $inputEmail,":inputPassword" => $inputPassword));
 
-            $q = "INSERT INTO accounts(Email, Password) VALUES(:inputEmail,:inputPassword);";
-            $query = $odb->prepare($q);
-            $results = $query->execute(array(
-                ":inputEmail" => $email,
-                ":inputPassword1" => $password1
-            ));
-        }
-
-}catch(PDOException $e)
-{
-    echo "Connection failed: " . $e->getMessage();
+    }
+    else {
+        header('Location:register.php');
+    }
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -154,7 +156,7 @@ try {
 
 <div class="bg overlay">
     <nav class="navbar navbar-light bg-faded fixed-top navbar-default navbar-fixed-top">
-        <a class="navbar-brand justify-content-start text-white lead" href="index.html">
+        <a class="navbar-brand justify-content-start text-white lead" href="index.php">
             <img src="/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
             <b>E</b>indhoven <b>B</b>ike <b>M</b>aintenance
         </a>
@@ -172,7 +174,7 @@ try {
         <div class="col">
             <div class="container" >
                 <div class="signInForm">
-                    <form action="account.php" class="container">
+                    <form action="account.php" class="container" method="post">
                         <div >
                             <h1 class="h3 mb-3 font-weight-normal text-white">Please sign up</h1>
                             <label for="inputEmail" class="sr-only">Email address</label>
@@ -180,12 +182,12 @@ try {
                                    placeholder="Email address" required autofocus>
                             <label for="inputPassword" class="sr-only">Password</label>
                             <input  type="password" id="inputPassword" name="inputPassword" class="form-control marginBot"
-                                   placeholder="Password" required>
+                                    placeholder="Password" required>
                             <label for="inputPassword" class="sr-only">Confirm password</label>
                             <input type="password" id="inputPassword2" name="inputPassword2" class="form-control marginBot"
                                    placeholder="Confirm password" required>
                             <div style="padding-bottom: 20px;">
-                                <button class="btn btn-lg btn-primary btn-block text-white" name ="btn" type="submit">
+                                <button class="btn btn-lg btn-primary btn-block text-white" name ="submit" type="submit">
                                     Register
                                 </button>
                             </div>

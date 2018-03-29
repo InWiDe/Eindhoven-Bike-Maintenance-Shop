@@ -13,7 +13,7 @@ CONTENTS OF THIS FILE
     * ~~Add more JS scrips~~
     * ~~Add PHP login authentication and registration~~ 
     * ~~Add more database tables based on account page~~
-    * ~~ Implement functionality to the newsletter subscription box ~~
+    * ~~Implement functionality to the newsletter subscription box~~
     
  
  * Requirements

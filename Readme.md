@@ -4,8 +4,10 @@ CONTENTS OF THIS FILE
  * Introduction 
  
 
-    This is a (work in progress) project for WEB class.
+    This is a final project for WEB class.
     The tehnologies used are HTML, CSS, JS, PHP & MySQL
+    
+    http://i388250.hera.fhict.nl/index.php
     
  * Project Status based on feedback:
     * ~~Create Readme.MD~~

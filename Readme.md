@@ -11,8 +11,9 @@ CONTENTS OF THIS FILE
     * ~~Create Readme.MD~~
     * ~~Move CSS code from inline style to external style sheet.~~
     * ~~Add more JS scrips~~
-    * Add PHP login authentication and registration 
-    * Add more database tables based on account page
+    * ~~Add PHP login authentication and registration~~ 
+    * ~~Add more database tables based on account page~~
+    * ~~ Implement functionality to the newsletter subscription box ~~
     
  
  * Requirements
